@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* Стиль текста в панели навигации */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  background-color: black;
+}
+
+#wrap {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+#nav {
+  list-style-type: none;
+}
+
+.nav__item {
+  background-color: #191c24;
+  width: 318px;
+  height: 75px;
+  padding-left: 29px;
+  /* Формат текста */
+  font-family: OpenSans;
+  color: #fff;
+  /* Цвет у активного и последнего пункта другие! */
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 75px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+
+#authorization {
+  background-color: #f7f8f8;
+  width: 639px;
+  height: 570px;
+}
