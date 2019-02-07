@@ -63,33 +63,38 @@ html, body {
 
 #nav {
   list-style-type: none;
-  
-  .nav__item {
-    a {
-      display: block;
-      width: $nav-item-width;
-      height: $nav-item-height;
-      background-color: $back-ground;
-      width: $nav-item-width;
-      height: $nav-item-height;
-      padding-left: $nav-padding-left;
-      /* Формат текста */
-      font-family: 'Open Sans', sans-serif;
-      color: $nav-font;
-      font-size: $nav-size;
-      font-weight: 700;
-      line-height: $nav-item-height;
-      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
-      text-decoration: none;
-    }
-    a:active {
-      background-color: $nav__item_active;
-    }
-    a:hover + .nav__item a {
-      background-color: $nav__item_near;
-    }
+}
+.nav__item {
+  background-color: $back-ground;
+  width: $nav-item-width;
+  height: $nav-item-height;
+  padding-left: $nav-padding-left;
+  /* Формат текста */
+  font-family: OpenSans;
+  color: $nav-font;
+  font-size: $nav-size;
+  font-weight: 700;
+  line-height: $nav-item-height;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+  a {
+    display: block;
+    width: $nav-item-width;
+    height: $nav-item-height;
+    /* Формат текста */
+    font-family: 'Open Sans', sans-serif;
+    color: $nav-font;
+    font-size: $nav-size;
+    font-weight: 700;
+    line-height: $nav-item-height;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
   }
-  
+  a:hover {
+    cursor: pointer;
+  }
+}
+.nav__item:last-child a {
+  color: #808592;
 }
 
 #main {

@@ -31,14 +31,24 @@ html, body {
   list-style-type: none;
 }
 
-#nav .nav__item a {
-  display: block;
-  width: 318px;
-  height: 75px;
+.nav__item {
   background-color: #191c24;
   width: 318px;
   height: 75px;
   padding-left: 29px;
+  /* Формат текста */
+  font-family: OpenSans;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 75px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+}
+
+.nav__item a {
+  display: block;
+  width: 318px;
+  height: 75px;
   /* Формат текста */
   font-family: 'Open Sans', sans-serif;
   color: #fff;
@@ -49,12 +59,12 @@ html, body {
   text-decoration: none;
 }
 
-#nav .nav__item a:active {
-  background-color: #2a2d37;
+.nav__item a:hover {
+  cursor: pointer;
 }
 
-#nav .nav__item a:hover + .nav__item a {
-  background-color: red;
+.nav__item:last-child a {
+  color: #808592;
 }
 
 #main {

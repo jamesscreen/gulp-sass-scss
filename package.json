@@ -1,7 +1,7 @@
 {
   "name": "test-task",
   "version": "1.0.0",
-  "description": "",
+  "description": "npm i --save-dev gulp gulp-sass",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,13 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesscreen/front-dev-test-task.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamesscreen/front-dev-test-task/issues"
+  },
+  "homepage": "https://github.com/jamesscreen/front-dev-test-task#readme"
 }
