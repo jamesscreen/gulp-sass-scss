@@ -4,20 +4,100 @@
   <meta charset="UTF-8">
   <title>Frontend Developer Test Task</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script/main.js"></script>
 </head>
 <body>
   
-  <div id="wrap">
+  <div id="container">
     <ul id="nav">
-        <li class="nav__item">Личный кабинет</li>
-        <li class="nav__item active">Платежи</li>
-        <li class="nav__item">История платежей</li>
-        <li class="nav__item">Настройки</li>
-        <li class="nav__item">Выйти</li>
+      <li class="nav__item"><a href="" class="links">Личный кабинет</a></li>
+      <li class="nav__item"><a href="" class="links">Платежи</a></li>
+      <li class="nav__item"><a href="" class="links">История платежей</a></li>
+      <li class="nav__item"><a href="" class="links">Настройки</a></li>
+      <li class="nav__item"><a href="" class="links">Выйти</a></li>
     </ul>
     <div id="main">
-      <div id="authorization"></div>
-      <div id="info"></div>
+      <div id="auth">
+        
+        <!--Таблица-->
+        <span class="subtitle">Информация по оплате:</span>
+        
+        <div id="score">
+          <div class="score__item subtitle">Номер счета:</div>
+          <div class="score__item value">87123658716587</div>
+          <div class="score__item subtitle">Сумма платежа:</div>
+          <div class="score__item value">100 руб.</div>
+        </div>
+        
+        <!--Заголовок-->
+        <h2>Данные банковской карты</h2>
+        
+        <!--Два блока div со стилизацией и компоновкой-->
+        <div id="card-block">
+          <form action="">
+            <span class="subtitle">Номер карты</span>
+            <div id="card-number">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+              <input type="text">
+            </div>
+            <div id="wrap-date-cvv">
+              <div id="card-date-block">
+                <span class="subtitle">Срок действия</span>
+                <div id="card-date">
+                  <select name="month">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select name="year">
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </div>
+              </div>
+              <div id="card-cvv-block">
+                <span class="subtitle">Код CVV2 / CVC2</span>
+                <input type="text" id="cvv-field">
+              </div>
+            </div>
+            <div id="card-user">
+              <input type="text" id="card-user-field" placeholder="Держатель карты">
+            </div>
+          </form>
+          <div id="card-front" class="card"></div>
+          <div id="card-back" class="card">
+            <div id="decor-back-card"></div>
+          </div>
+        </div>
+
+        <!--Кнопка оплаты-->
+        
+        <div id="send-btn">Оплатить</div>
+        
+      </div>
+      <div id="info">
+        Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.<br><br>
+        Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.<br><br>
+        Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.<br><br>
+        Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+      </div>
     </div>
   </div>
   

@@ -1,5 +1,15 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Open Sans';
+  src: local("Open Sans"), local("OpenSans"), url("opensans.woff2") format("woff2"), url("opensans.woff") format("woff"), url("opensans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Стиль текста в панели навигации */
+/* Формат блока авторризации */
+/*Формат подзаголовка*/
+/* Формат инфо блока */
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +20,9 @@ html, body {
   background-color: black;
 }
 
-#wrap {
+#container {
   margin-top: 80px;
+  margin-bottom: 80px;
   display: flex;
   justify-content: center;
 }
@@ -20,23 +31,246 @@ html, body {
   list-style-type: none;
 }
 
-.nav__item {
+#nav .nav__item a {
+  display: block;
+  width: 318px;
+  height: 75px;
   background-color: #191c24;
   width: 318px;
   height: 75px;
   padding-left: 29px;
   /* Формат текста */
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   color: #fff;
-  /* Цвет у активного и последнего пункта другие! */
   font-size: 18px;
   font-weight: 700;
   line-height: 75px;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
 }
 
-#authorization {
-  background-color: #f7f8f8;
+#nav .nav__item a:active {
+  background-color: #2a2d37;
+}
+
+#nav .nav__item a:hover + .nav__item a {
+  background-color: red;
+}
+
+#main {
   width: 639px;
-  height: 570px;
+}
+
+#main #auth {
+  background-color: #f7f8f8;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 47px;
+  padding-left: 29px;
+  padding-right: 45px;
+  padding-bottom: 46px;
+}
+
+#main #auth #score {
+  display: grid;
+  margin-top: 23px;
+  grid-template-columns: 160px 160px;
+}
+
+#main #auth .subtitle {
+  font-family: Arial;
+  color: #8494ab;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
+
+#main #auth .value {
+  font-family: Arial;
+  color: #373c43;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
+
+#main #auth h2 {
+  margin-top: 35px;
+  margin-bottom: 22px;
+  font-family: 'Open Sans', sans-serif;
+  color: #383d43;
+  font-size: 21.98px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: left;
+}
+
+#main #auth #card-block {
+  position: relative;
+  width: 100%;
+  height: 256px;
+}
+
+#main #auth #card-block form {
+  position: absolute;
+  z-index: 2;
+  padding-top: 22px;
+  padding-left: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#main #auth #card-block form #card-number {
+  display: flex;
+  margin-top: 2px;
+  margin-bottom: 12px;
+}
+
+#main #auth #card-block form #card-number input {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e4e9ee;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  width: 65px;
+  height: 42px;
+  margin-right: 9px;
+}
+
+#main #auth #card-block form #wrap-date-cvv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#main #auth #card-block form #wrap-date-cvv #card-date {
+  margin-top: 2px;
+  margin-right: 9px;
+}
+
+#main #auth #card-block form #wrap-date-cvv #card-date select {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e4e9ee;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  width: 70px;
+  height: 42px;
+  text-align: center;
+  /*Формат текста*/
+  font-family: Arial;
+  color: #373c43;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+#main #auth #card-block form #wrap-date-cvv #card-date select:nth-child(2) {
+  width: 86px;
+}
+
+#main #auth #card-block form #wrap-date-cvv #card-cvv-block .subtitle {
+  margin-right: 24px;
+  margin-bottom: 4px;
+}
+
+#main #auth #card-block form #wrap-date-cvv #card-cvv-block #cvv-field {
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e4e9ee;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  width: 138px;
+  height: 42px;
+  margin-top: 2px;
+}
+
+#main #auth #card-block form #card-user {
+  margin-top: 12px;
+}
+
+#main #auth #card-block form #card-user input {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e4e9ee;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  width: 319px;
+  height: 42px;
+  padding-left: 12px;
+  font-family: Arial;
+  color: #bec6cf;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
+
+#main #auth #card-block .card {
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e4e9ee;
+  box-sizing: border-box;
+  background-color: #f7f8f8;
+  width: 350px;
+  height: 236px;
+}
+
+#main #auth #card-block #card-front {
+  position: absolute;
+  z-index: 1;
+}
+
+#main #auth #card-block #card-back {
+  position: absolute;
+  z-index: 0;
+  top: 20px;
+  right: 0;
+  text-align: right;
+}
+
+#main #auth #card-block #card-back #decor-back-card {
+  background-color: #e4e9ee;
+  width: 100%;
+  height: 42px;
+  margin-bottom: 19px;
+  margin-top: 26px;
+  right: 0;
+}
+
+#main #auth #send-btn {
+  margin-top: 20px;
+  margin-left: 15px;
+  border-radius: 20px;
+  background-color: #005abf;
+  width: 133px;
+  height: 40px;
+  font-family: OpenSans;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+}
+
+#main #info {
+  background-color: #373c43;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 26px;
+  padding-left: 29px;
+  padding-right: 45px;
+  padding-bottom: 26px;
+  /*Формат текста*/
+  font-family: Arial;
+  color: #89909d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
 }
