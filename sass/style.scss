@@ -25,24 +25,8 @@ $nav__item_near: red;
 /* Формат блока авторризации */
 $auth-bg-color: #f7f8f8;
 
-/*Формат подзаголовка*/
-//$subtitles
-//font-family: Arial;
-//color:  #8494ab;
-//font-size: 16px;
-//font-weight: 400;
-//line-height: 21px;
-//text-align: left;
-
 /* Формат инфо блока */
 $main-width: 639px;
-//$main-height: 570px;
-//$info-width: 639px;
-//$info-height: 263px;
-$info-padding-top: 26px;
-$info-padding-left: 29px;
-$info-padding-right: 45px;
-$info-padding-bottom: 26px;
 
 * {
   margin: 0;
@@ -66,8 +50,6 @@ html, body {
 }
 .nav__item {
   background-color: $back-ground;
-  width: $nav-item-width;
-  height: $nav-item-height;
   padding-left: $nav-padding-left;
   /* Формат текста */
   font-family: OpenSans;
@@ -159,20 +141,18 @@ html, body {
         width: 100%;
         box-sizing: border-box;
         
-        #card-number {
+        .card-number {
           display: flex;
-          margin-top: 2px;
-          margin-bottom: 12px;
+          margin-top: 2px 0 12px 0;
           
-          input {
-            border-style: solid;
-            border-width: 1px;
-            border-color:  #e4e9ee;
+          .card-number__item {
+            border: 1px solid #e4e9ee;
             box-sizing: border-box;
             background-color:  #ffffff;
             width: 65px;
             height: 42px;
             margin-right: 9px;
+            padding-left: 12px;
           }
         }
         
@@ -209,7 +189,6 @@ html, body {
             width: 86px;
           }
         }
-          
           #card-cvv-block {
             .subtitle {
               margin-right: 24px;
@@ -217,71 +196,81 @@ html, body {
             }
             #cvv-field {
               display: block;
-              border-style: solid;
-              border-width: 1px;
-              border-color:  #e4e9ee;
+              border: 1px solid #e4e9ee;
               box-sizing: border-box;
               background-color:  #ffffff;
               width: 138px;
               height: 42px;
               margin-top: 2px;
+              padding-left: 12px;
+            }
+          }
+          #cvv-faq {
+            position: relative;
+            svg {
+              position: absolute;
+              top: 8px;
+              right: 24px;
+            }
+            svg:hover {
+              fill: black;
+              cursor: pointer;
+              transition: 200ms;
+              -webkit-transition: 200ms;
             }
           }
         }
         
-        #card-user {
+        .card-user {
           margin-top: 12px;
           
-          input {
-            border-style: solid;
-            border-width: 1px;
-            border-color:  #e4e9ee;
+          .card-user__field {
+            border: 1px solid #e4e9ee;
             box-sizing: border-box;
             background-color:  #ffffff;
             width: 319px;
             height: 42px;
-            
+            /* формат текста */
             padding-left: 12px;
             font-family: Arial;
+            
             color:  #bec6cf;
+//            -webkit-input-placeholder: #bec6cf;      /* webkit */
+//            -moz-webkit-input-placeholder: #bec6cf;  /* Firefox 19+ */
+//            -ms-webkit-input-placeholder: #bec6cf;   /* Firefox 18- */
+//            -o-webkit-input-placeholder: #bec6cf;    /* IE */
+            
             font-size: 16px;
             font-weight: 400;
             line-height: 21px;
-            text-align: left;
           }
         }
       }
       
       .card {
         border-radius: 10px;
-        border-style: solid;
-        border-width: 1px;
-        border-color:  #e4e9ee;
+        border: 1px solid #e4e9ee;
         box-sizing: border-box;
         background-color:  #f7f8f8;
         width: 350px;
         height: 236px;
       }
-      
-      #card-front {
+      .card-front {
         position: absolute;
         z-index: 1;
       }
-      
-      #card-back {
+      .card-back {
         position: absolute;
         z-index: 0;
-        top: 20px;
+        top: 14px;
         right: 0;
         text-align: right;
         
-        #decor-back-card {
+        .card-back__decor-line {
           background-color:  #e4e9ee;
           width: 100%;
           height: 42px;
-          margin-bottom: 19px;
-          margin-top: 26px;
-          right: 0;
+          margin: 26px 0 19px 0;
         }
       }
     }
@@ -305,15 +294,9 @@ html, body {
   
   #info {
     background-color:  #373c43;
-    
     width: 100%;
     box-sizing: border-box;
-    
-    padding-top: $info-padding-top;
-    padding-left: $info-padding-left;
-    padding-right: $info-padding-right;
-    padding-bottom: $info-padding-bottom;
-    
+    padding: 26px 45px 33px 29px;
     /*Формат текста*/
     font-family: Arial;
     color:  #89909d;
@@ -322,4 +305,8 @@ html, body {
     line-height: 18px;
     text-align: left;
   }
+}
+
+@media screen and (max-width: 1102px){
+  
 }
