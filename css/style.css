@@ -26,7 +26,7 @@ html, body {
   justify-content: center;
 }
 
-#nav {
+nav ul {
   list-style-type: none;
 }
 
@@ -44,7 +44,7 @@ html, body {
 
 .nav__item a {
   display: block;
-  width: 318px;
+  min-width: 318px;
   height: 75px;
   /* Формат текста */
   font-family: 'Open Sans', sans-serif;
@@ -64,27 +64,24 @@ html, body {
   color: #808592;
 }
 
-#main {
+main {
   width: 639px;
 }
 
-#main #auth {
+main #auth {
   background-color: #f7f8f8;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 47px;
-  padding-left: 29px;
-  padding-right: 45px;
-  padding-bottom: 46px;
+  padding: 47px 29px 46px 45px;
 }
 
-#main #auth #score {
+main #auth #score {
   display: grid;
   margin-top: 23px;
   grid-template-columns: 160px 160px;
 }
 
-#main #auth .subtitle {
+main #auth .subtitle {
   font-family: Arial;
   color: #8494ab;
   font-size: 16px;
@@ -93,7 +90,7 @@ html, body {
   text-align: left;
 }
 
-#main #auth .value {
+main #auth .value {
   font-family: Arial;
   color: #373c43;
   font-size: 16px;
@@ -102,7 +99,7 @@ html, body {
   text-align: left;
 }
 
-#main #auth h2 {
+main #auth h2 {
   margin-top: 35px;
   margin-bottom: 22px;
   font-family: 'Open Sans', sans-serif;
@@ -113,27 +110,26 @@ html, body {
   text-align: left;
 }
 
-#main #auth #card-block {
+main #auth #card-block {
   position: relative;
   width: 100%;
   height: 256px;
 }
 
-#main #auth #card-block form {
+main #auth #card-block form {
   position: absolute;
   z-index: 2;
-  padding-top: 22px;
-  padding-left: 15px;
+  padding: 22px 0 0 15px;
   width: 100%;
   box-sizing: border-box;
 }
 
-#main #auth #card-block form .card-number {
+main #auth #card-block form .card-number {
   display: flex;
   margin-top: 2px 0 12px 0;
 }
 
-#main #auth #card-block form .card-number .card-number__item {
+main #auth #card-block form .card-number .card-number__item {
   border: 1px solid #e4e9ee;
   box-sizing: border-box;
   background-color: #ffffff;
@@ -143,21 +139,19 @@ html, body {
   padding-left: 12px;
 }
 
-#main #auth #card-block form #wrap-date-cvv {
+main #auth #card-block form #wrap-date-cvv {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-#main #auth #card-block form #wrap-date-cvv #card-date {
+main #auth #card-block form #wrap-date-cvv #card-date {
   margin-top: 2px;
   margin-right: 9px;
 }
 
-#main #auth #card-block form #wrap-date-cvv #card-date select {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #e4e9ee;
+main #auth #card-block form #wrap-date-cvv #card-date select {
+  border: 1px solid #e4e9ee;
   box-sizing: border-box;
   background-color: #ffffff;
   width: 70px;
@@ -173,16 +167,16 @@ html, body {
   padding-left: 15px;
 }
 
-#main #auth #card-block form #wrap-date-cvv #card-date select:nth-child(2) {
+main #auth #card-block form #wrap-date-cvv #card-date select:nth-child(2) {
   width: 86px;
 }
 
-#main #auth #card-block form #wrap-date-cvv #card-cvv-block .subtitle {
+main #auth #card-block form #wrap-date-cvv #card-cvv-block .subtitle {
   margin-right: 24px;
   margin-bottom: 4px;
 }
 
-#main #auth #card-block form #wrap-date-cvv #card-cvv-block #cvv-field {
+main #auth #card-block form #wrap-date-cvv #card-cvv-block #cvv-field {
   display: block;
   border: 1px solid #e4e9ee;
   box-sizing: border-box;
@@ -193,28 +187,28 @@ html, body {
   padding-left: 12px;
 }
 
-#main #auth #card-block form #wrap-date-cvv #cvv-faq {
+main #auth #card-block form #wrap-date-cvv #cvv-faq {
   position: relative;
 }
 
-#main #auth #card-block form #wrap-date-cvv #cvv-faq svg {
+main #auth #card-block form #wrap-date-cvv #cvv-faq svg {
   position: absolute;
   top: 8px;
   right: 24px;
 }
 
-#main #auth #card-block form #wrap-date-cvv #cvv-faq svg:hover {
+main #auth #card-block form #wrap-date-cvv #cvv-faq svg:hover {
   fill: black;
   cursor: pointer;
   transition: 200ms;
   -webkit-transition: 200ms;
 }
 
-#main #auth #card-block form .card-user {
+main #auth #card-block form .card-user {
   margin-top: 12px;
 }
 
-#main #auth #card-block form .card-user .card-user__field {
+main #auth #card-block form .card-user .card-user__field {
   border: 1px solid #e4e9ee;
   box-sizing: border-box;
   background-color: #ffffff;
@@ -229,7 +223,7 @@ html, body {
   line-height: 21px;
 }
 
-#main #auth #card-block .card {
+main #auth #card-block .card {
   border-radius: 10px;
   border: 1px solid #e4e9ee;
   box-sizing: border-box;
@@ -238,12 +232,12 @@ html, body {
   height: 236px;
 }
 
-#main #auth #card-block .card-front {
+main #auth #card-block .card-front {
   position: absolute;
   z-index: 1;
 }
 
-#main #auth #card-block .card-back {
+main #auth #card-block .card-back {
   position: absolute;
   z-index: 0;
   top: 14px;
@@ -251,20 +245,24 @@ html, body {
   text-align: right;
 }
 
-#main #auth #card-block .card-back .card-back__decor-line {
+main #auth #card-block .card-back .card-back__decor-line {
   background-color: #e4e9ee;
   width: 100%;
   height: 42px;
   margin: 26px 0 19px 0;
 }
 
-#main #auth #send-btn {
-  margin-top: 20px;
-  margin-left: 15px;
+main #auth .send-btn {
+  margin: 20px 0 0 15px;
   border-radius: 20px;
-  background-color: #005abf;
+  background: -webkit-linear-gradient(90deg, #005abf 0%, rgba(0, 90, 191, 0.4) 100%);
+  background: -moz-linear-gradient(90deg, #005abf 0%, rgba(0, 90, 191, 0.4) 100%);
+  background: -o-linear-gradient(90deg, #005abf 0%, rgba(0, 90, 191, 0.4) 100%);
+  background: -ms-linear-gradient(90deg, #005abf 0%, rgba(0, 90, 191, 0.4) 100%);
+  background: linear-gradient(0deg, #005abf 0%, rgba(0, 90, 191, 0.4) 100%);
   width: 133px;
   height: 40px;
+  /*Формат текста*/
   font-family: OpenSans;
   color: #ffffff;
   font-size: 14px;
@@ -273,7 +271,11 @@ html, body {
   text-align: center;
 }
 
-#main #info {
+main #auth .send-btn:hover {
+  cursor: pointer;
+}
+
+main footer {
   background-color: #373c43;
   width: 100%;
   box-sizing: border-box;
@@ -285,4 +287,110 @@ html, body {
   font-weight: 400;
   line-height: 18px;
   text-align: left;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    width: 424px;
+  }
+  #wrap-date-cvv {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  #container {
+    flex-direction: column;
+    align-items: center;
+  }
+  main, nav {
+    width: 639px;
+  }
+  ul .nav__item {
+    padding: 0;
+    text-align: center;
+  }
+  ul .nav__item a {
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  main, nav, footer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  main #auth {
+    padding: 20px 10px 20px 10px;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  #container {
+    margin: 0;
+  }
+  main #auth {
+    padding: 20px 0px 10px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #auth #score {
+    grid-template-columns: 50% 50%;
+  }
+  main #auth #card-block {
+    height: 294px;
+  }
+  main #auth #card-block .card {
+    width: 100%;
+  }
+  main #auth #card-block form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 0 0;
+    width: 100%;
+  }
+  main #auth #card-block form .card-number {
+    margin-top: 10px;
+  }
+  main #auth #card-block form .card-number .card-number__item:last-child {
+    margin-right: 0;
+  }
+  main #auth #card-block form .card-user {
+    width: 100%;
+  }
+  main #auth #card-block form .card-user .card-user__field {
+    width: 100%;
+  }
+  main #auth #card-block form #wrap-date-cvv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  main #auth #card-block form #wrap-date-cvv #card-cvv-block {
+    margin-top: 10px;
+  }
+  main #auth #card-block form #wrap-date-cvv #card-cvv-block .subtitle {
+    margin-right: 0;
+  }
+  main #auth #card-block form #wrap-date-cvv #cvv-faq svg {
+    right: 8px;
+  }
+  main #auth #card-block .card-front {
+    width: 100%;
+    height: 305px;
+    display: none;
+  }
+  main #auth #card-block .card-back {
+    display: none;
+  }
+  main #auth .send-btn {
+    margin-left: 0;
+  }
 }

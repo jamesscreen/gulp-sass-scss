@@ -45,7 +45,7 @@ html, body {
   justify-content: center;
 }
 
-#nav {
+nav ul {
   list-style-type: none;
 }
 .nav__item {
@@ -60,7 +60,7 @@ html, body {
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
   a {
     display: block;
-    width: $nav-item-width;
+    min-width: $nav-item-width;
     height: $nav-item-height;
     /* Формат текста */
     font-family: 'Open Sans', sans-serif;
@@ -79,19 +79,14 @@ html, body {
   color: #808592;
 }
 
-#main {
+main {
   width: $main-width;
-  
   
   #auth {
     background-color:  $auth-bg-color;
     width: 100%;
     box-sizing: border-box;
-    padding-top: 47px;
-    padding-left: 29px;
-    padding-right: 45px;
-    padding-bottom: 46px;
-//    height: 570px;
+    padding: 47px 29px 46px 45px;
     
     #score {
       display: grid;
@@ -136,8 +131,7 @@ html, body {
       form {
         position: absolute;
         z-index: 2;
-        padding-top: 22px;
-        padding-left: 15px;
+        padding: 22px 0 0 15px;
         width: 100%;
         box-sizing: border-box;
         
@@ -166,9 +160,7 @@ html, body {
           margin-right: 9px;
           
           select {
-            border-style: solid;
-            border-width: 1px;
-            border-color:  #e4e9ee;
+            border: 1px solid #e4e9ee;
             box-sizing: border-box;
             background-color:  #ffffff;
             width: 70px;
@@ -275,14 +267,17 @@ html, body {
       }
     }
     
-    #send-btn {
-      margin-top: 20px;
-      margin-left: 15px;
+    .send-btn {
+      margin: 20px 0 0 15px;
       border-radius: 20px;
-      background-color:  #005abf;
+      background: -webkit-linear-gradient(90deg, rgba(0, 90, 191, 1) 0%, rgba(0, 90, 191, 0.4) 100%);
+      background: -moz-linear-gradient(90deg, rgba(0, 90, 191, 1) 0%, rgba(0, 90, 191, 0.4) 100%);
+      background: -o-linear-gradient(90deg, rgba(0, 90, 191, 1) 0%, rgba(0, 90, 191, 0.4) 100%);
+      background: -ms-linear-gradient(90deg, rgba(0, 90, 191, 1) 0%, rgba(0, 90, 191, 0.4) 100%);
+      background: linear-gradient(0deg, rgba(0, 90, 191, 1) 0%, rgba(0, 90, 191, 0.4) 100%);
       width: 133px;
       height: 40px;
-      
+      /*Формат текста*/
       font-family: OpenSans;
       color:  #ffffff;
       font-size: 14px;
@@ -290,9 +285,12 @@ html, body {
       line-height: 40px;
       text-align: center;
     }
+    .send-btn:hover {
+      cursor: pointer;
+    }
   }
   
-  #info {
+  footer {
     background-color:  #373c43;
     width: 100%;
     box-sizing: border-box;
@@ -307,6 +305,126 @@ html, body {
   }
 }
 
-@media screen and (max-width: 1102px){
-  
+
+@media screen and (max-width: 1000px){
+  main {
+    width: 424px;
+  }
+  #wrap-date-cvv {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 790px){
+  #container {
+    flex-direction: column;
+    align-items: center;
+  }
+  main, nav {
+    width: $main-width;
+  }
+  ul {
+    .nav__item {
+      padding: 0;
+      text-align: center;
+      a {
+        min-width: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 660px){
+  main, nav, footer{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 440px){
+  main {
+    #auth {
+      padding: 20px 10px 20px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 385px){
+  #container {
+    margin: 0;
+  }
+  main {
+    #auth {
+      padding: 20px 0px 10px 0px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      #score {
+        grid-template-columns: 50% 50%;
+      }
+      
+      #card-block {
+        height: 294px;
+        .card {
+          width: 100%;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 0 0 0;
+          width: 100%;
+
+          .card-number {
+            margin-top: 10px;
+            
+            .card-number__item:last-child {
+              margin-right: 0;
+            }
+          }
+          
+          .card-user {
+            width: 100%;
+            .card-user__field {
+              width: 100%;
+            }
+          }
+          
+          #wrap-date-cvv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+            #card-cvv-block {
+              margin-top: 10px;
+              .subtitle {
+                margin-right: 0;
+              }
+            }
+            
+            #cvv-faq svg {
+              right: 8px;
+            }
+          }
+        }
+        
+        .card-front {
+          width: 100%;
+          height: 305px;
+          display: none;
+        }
+      
+        .card-back {
+          display: none;
+        }
+      }
+      
+      .send-btn {
+        margin-left: 0;
+      }
+    }
+  }
 }
